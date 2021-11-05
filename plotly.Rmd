@@ -1,0 +1,54 @@
+---
+title: "plotly"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+---
+
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("rest_inspec")
+```
+
+## Boxplot
+
+```{r}
+## Extract data for zip-code = 10032
+zip_box = 
+  rest_inspec %>% 
+  janitor::clean_names() %>% 
+  filter(zipcode == "10032") %>% 
+  drop_na(score) %>% 
+  mutate(
+    street = as.factor(street),
+    street = fct_recode(
+      street, 
+      "WEST 169TH STREET" = "W 169TH ST",
+      "West 168TH STREET" = "W 168TH ST",
+      "West 168TH STREET" = "WEST 168 STREET",
+      "West 168TH STREET" = "WEST  168 STREET",
+      "HAVEN AVENUE" = "HAVEN AVE",
+      "EDWARD M MORGAN PLACE" = "EDWARD M MORGAN PL",
+      "WEST 172TH STREET" = "WEST  172 STREET",
+      "AUDUBON AVENUE" = "AUDUBON AVE",
+      "ST NICHOLAS AVENUE" = "ST NICHOLAS PLACE",
+      "ST NICHOLAS AVENUE" = "SAINT NICHOLAS AVE",
+      "AMSTERDAM AVENUE" = "AMSTERDAM AVE"
+    )
+  ) %>% 
+  plot_ly(
+    x = ~street, y = ~score, type = "box"
+  )
+
+zip_box
+```
+
+

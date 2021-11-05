@@ -1,4 +1,4 @@
-name: "Wenshan Qu"
+name: "Wenshan_personal_web"
 output_dir: "."
 navbar:
   title: "Home"
@@ -13,4 +13,4 @@ navbar:
       href: http://github.com/WenshanQu/
 output:
   html_document:
-    theme: cerulean
+    theme: readable
