@@ -1,0 +1,16 @@
+name: "Wenshan Qu"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About Me"
+      href: index.html
+    - text: "Resume"
+      href: resume.html
+    - icon: fa-envelope fa-lg
+      href: mailto:wq2160@cumc.columbia.edu
+    - icon: fa-github fa-lg
+      href: http://github.com/WenshanQu/
+output:
+  html_document:
+    theme: cerulean

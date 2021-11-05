@@ -1,0 +1,22 @@
+---
+title: "Welcome to Wenshan's personal website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+## Introduction
+
+Hi! I am Wenshan Qu. I am currently a Master of Science student at [Columbia University](https://www.columbia.edu/content/academics), [Mailman School of Public Health](http://www.publichealth.columbia.edu/), majoring in [Biostatistics](http://www.publichealth.columbia.edu/academics/departments/biostatistics).  
+
+<center><img src="picture/mailman.jpg" style="width:75%"></center>
+
+My undergraduate major is Biology, and through my 4-year undergraduate study at [Shandong University](https://www.en.sdu.edu.cn/), I gradually found out that my interest lies in tackling public health issues rather than illustrating biological mechanisms. What further pushed me to Biostatistics is the chance that in 2019, I went to UCLA summer session and take a Biostatistics class, learning how to use STATA to manipulating data. Inspired by these factors, I eventually decided to devote my future life and passion into this new major - biostatistics.
+
+Though it is really exciting to "play" with data, it is also challenging for me to step in a new academic area. I am now studying how to use **R programming** to clean and tidy data, manipulate and arrange them, visualize data, and finally getting useful information from raw data and representing the results to other people without statistical knowledge in a human-friendly form. 
+
+There are still lots of things I need to learn, but I am confident that I have enough passion and competence to overcome the confronted difficulties! 
+
+Even my undergraduate major and research projects mainly focus on microbiology, I think it will still be helpful to view my [resume](resume.html) if you want to know more about me!

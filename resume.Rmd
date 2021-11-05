@@ -1,0 +1,95 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+### EDUCATION
+
+#### School of Life Science, Shandong University, China       	
+
+**Bachelor of Science in Biology Science**
+
+Overall GPA: 3.93/4.0 (90.60/100) | Major GPA: 3.95/4.0
+
+Ranking: 5/151
+
+Duration: Sept. 2017 ~ Jun, 2021
+
+#### University of California, Los Angeles   
+
+**Summer Session C**
+
+GPA: 4.0/4.0
+
+Selected Course: _Intro-Biostatistics_, _Biomedical Research Concepts_
+
+Duration: Aug. 2019~Sept. 2019
+
+### STANDARD TESTS
+
+#### GRE
+
+325 + 4.0, V155 (67％below), Q170 (96％below), AW4.0 (55％below) 	
+
+#### TOEFL iBT
+
+104 (Reading 28, Listening 27, Speaking 23 and Writing 26)	
+
+### RESEARCH EXPERIENCE
+
+#### Inhibition Effect of several Grampositive pathogenic bacteria by LasA Protease from _Psedomonas aeruginosa_
+
+Prof. Lichuan Gu
+
+Nov. 2020 ~ June. 2021
+
+State Key Laboratory of Microbial Technology, Shandong University
+
+- Obtained the mature LasA (which is a virulence protein of _Psedomonas aeruginosa_) by heterologous expression in _E.coli_ BL21 and in vitro Trypsin cleavage. 
+- Crystallized LasA protease in numerous chemical conditions.
+- Build the biofilm of _Gardnerella vaginalis_, _Staphylococcus aureus_ and _Streptococcus mutans_.
+- Treated the biofilm of three Grampositive bacteria with purified LasA protease.
+- Highlights the potential of LasA as a biofilm-related bacterial infection therapy agent.
+
+
+#### Purification of _C. jejuni_ proteins HerB and HerR under three ionic conditions
+
+Prof. Xiang Gao
+
+Mar. 2019 ~ Jan. 2020
+
+State Key Laboratory of Microbial Technology, Shandong University
+
+Performed purification of HerB and HerR proteins found in C. jejuni under Mg2+, Ca2+ and Mn2+ conditions with the aid of a range of protein purification techniques, namely, immobilized metal ion affinity chromatography (IMAC), ion exchange chromatography, and sephadex-gel chromatography
+
+
+### SKILLS
+
+#### Software
+
+SPSS, Minitab 17, SigmaPlot, Origin9.0 etc.
+
+#### Programming language
+
+R programming
+
+#### Piano
+
+10+ years, non-professional Grade 6, 8 and 10 accreditations by the Chinese Musicians' Association 
+
+
+### HONORS
+
+- _(Jul. 2020)_ Outstanding attendee of Tsinghua University Life Sciences and Basic Medicine 2020 Cloud Summer Camp 
+- _(Sept. 2018)_ First class scholarship by Shandong University (5%)  
+
+### EXTRACURRICULAR ACTIVITIES
+
+- _(Jul. 2015)_ Participant of Harvard Summit for Young Leader in China (HSYLC) 2015 program
+
+- _(May. 2020)_ Co-addresser for the Shandong University National Training Base Program microbiology major specialization mentor team    
+
+- _(Sept. 2017~Jul. 2018)_ Member of the Academic Department of Shandong University’s School of Life Science 
