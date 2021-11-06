@@ -1,0 +1,77 @@
+---
+title: "NOAA data of station USC00309072"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Scatterplot
+
+```{r}
+noaa = 
+  read.csv("./data/nynoaadat.csv") %>% 
+  janitor::clean_names() %>% 
+  filter(id == "USC00309072") %>% 
+  separate(date, into = c("year", "month", "day"), sep = "-") %>% 
+  mutate(
+    year = as.numeric(year),
+    month = as.numeric(month),
+    day = as.numeric(day),
+    month = month.name[month]
+  )
+
+snow_temp = 
+  noaa %>% 
+  filter(!(snow == 0)) %>% 
+  plot_ly(
+    x = ~tmin, y = ~snow, type = "scatter", mode = "markers"
+  )
+
+snow_temp
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Boxplot
+
+```{r}
+year_prcp = 
+  noaa %>%
+  mutate(
+    year = as.factor(year)
+  ) %>% 
+  group_by(year) %>% 
+  filter(prcp %in% 100:400) %>% 
+  filter(year %in% 1995:2010) %>% 
+  plot_ly(
+    x = ~year, y = ~prcp, type = "box"
+  )
+
+year_prcp
+```
+
+### Barplot
+
+```{r}
+aver_prcp = 
+  noaa %>% 
+  group_by(year) %>% 
+  drop_na(prcp) %>% 
+  summarize(mean_prcp = mean(prcp)) %>% 
+  plot_ly(
+    x = ~year, y = ~mean_prcp, type = "bar"
+  )
+
+aver_prcp
+```

@@ -1,0 +1,86 @@
+---
+title: "plotly 2"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+---
+
+This is extra work for NOAA data.
+
+```{r, include=FALSE}
+library(tidyverse)
+library(rnoaa)
+library(plotly)
+```
+
+Because the data set is huge, we just choose one weather station to analyze. Randomly we choose station with id `USC00309072`
+
+```{r}
+noaa = 
+  read.csv("./data/nynoaadat.csv") %>% 
+  janitor::clean_names() %>% 
+  filter(id == "USC00309072") %>% 
+  separate(date, into = c("year", "month", "day"), sep = "-") %>% 
+  mutate(
+    year = as.numeric(year),
+    month = as.numeric(month),
+    day = as.numeric(day),
+    month = month.name[month]
+  )
+```
+
+
+## Scatterplot
+
+First, we want to know that in this station, the relationship between minimum temperature (tenths of degrees C) (`tmin`) and snowfall (mm) (`snow`).
+
+```{r, warning=FALSE, message=FALSE}
+snow_temp = 
+  noaa %>% 
+  filter(!(snow == 0)) %>% 
+  plot_ly(
+    x = ~tmin, y = ~snow, type = "scatter", mode = "markers"
+  )
+
+snow_temp
+```
+
+## Boxplot
+
+This boxplot show the precipitation distribution from 1995 to 2010. Because outliers will extremely influence our boxplot, I limit the `pcrp` range from 100 mm to 400 mm.
+
+```{r}
+year_prcp = 
+  noaa %>%
+  mutate(
+    year = as.factor(year)
+  ) %>% 
+  group_by(year) %>% 
+  filter(prcp %in% 100:400) %>% 
+  filter(year %in% 1995:2010) %>% 
+  plot_ly(
+    x = ~year, y = ~prcp, type = "box"
+  )
+
+year_prcp
+```
+
+## Bar plot
+
+This bar plot shows the mean precipitation (mm) between 1995 - 2010.
+
+```{r}
+aver_prcp = 
+  noaa %>% 
+  group_by(year) %>% 
+  drop_na(prcp) %>% 
+  summarize(mean_prcp = mean(prcp)) %>% 
+  plot_ly(
+    x = ~year, y = ~mean_prcp, type = "bar"
+  )
+
+aver_prcp
+```
+

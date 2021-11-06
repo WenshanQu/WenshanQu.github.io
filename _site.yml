@@ -9,15 +9,22 @@ navbar:
       href: resume.html
     - text: "Plotly and Dashboard"
       menu: 
-      - text: "Plotly Code"
+      - text: "Plotly Code 1"
         href: plotly.html
-      - text: "Flexdashboard"
+      - text: "Flexdashboard 1"
         href: rest_insp.html
+      - text: "Plotly Code 2"
+        href: plotly2.html
+      - text: "Flexdashboard 2"
+        href: noaa.html
+        
   right:
     - icon: fa-envelope fa-lg
       href: mailto:wq2160@cumc.columbia.edu
     - icon: fa-github fa-lg
       href: http://github.com/WenshanQu/
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/wenshan-qu-7a7a021bb/
 output:
   html_document:
     theme: readable
