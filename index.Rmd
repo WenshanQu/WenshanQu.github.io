@@ -19,4 +19,20 @@ Though it is really exciting to "play" with data, it is also challenging for me 
 
 There are still lots of things I need to learn, but I am confident that I have enough passion and competence to overcome the confronted difficulties! 
 
+## Resume
+
 Even my undergraduate major and research projects mainly focus on microbiology, I think it will still be helpful to view my [resume](resume.html) if you want to know more about me!
+
+## Data manipulation and visualization
+
+[Here](rest_insp.html) is my plotly and flexdashboard results. I deal with the `NYC Restaurant Inspection Results`, and focus on the geographical distinction for grade and score. And simple explanation on the plots can be seen [here](plotly.html).
+
+## More contact information
+
+Email: wq2160@cumc.columbia.edu
+
+GitHub: https://github.com/WenshanQu
+
+You can also directly link to these accounts by clicking the button on the top of this page!
+
+
