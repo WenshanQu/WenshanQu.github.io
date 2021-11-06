@@ -1,28 +1,22 @@
 ---
-title: "plotly"
+title: "NYC Restaurant Inspection Results"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-    theme: readable
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
 
-
-```{r, include = FALSE}
+```{r setup, include=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
 ```
 
-```{r}
-data("rest_inspec")
-```
+Column {data-width=650}
+-----------------------------------------------------------------------
 
-## Boxplot
-
-This plot shows for zip-code = 10032 area (where I live now, in Tower 2, 100 Haven Ave), the score distribution of each street.
-
-From this plot, we can have a general idea of which street have more favorable food safety.
+### Boxplot
 
 ```{r}
 ## Extract data for zip-code = 10032
@@ -55,11 +49,10 @@ zip_box =
 zip_box
 ```
 
-Note that the raw data of street name have some overlap expression, I modified these names.
+Column {data-width=350}
+-----------------------------------------------------------------------
 
-## Histogram
-
-This plot shows in 5 boros, the number of restaurants in Grade A, B and C separately. It gives us a general idea of the grade distribution in each boro.
+### Histogram
 
 ```{r}
 ABC_hist = 
@@ -78,9 +71,7 @@ ABC_hist =
 ABC_hist
 ```
 
-## Scatterplot
-
-This plot shows the relationship between grade level A, B, C and the score in BRONX boro.
+### Scatterplot
 
 ```{r}
 score_point = 
@@ -96,5 +87,3 @@ score_point =
 
 score_point
 ```
-
-
