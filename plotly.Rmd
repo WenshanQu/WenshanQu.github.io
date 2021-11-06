@@ -51,4 +51,41 @@ zip_box =
 zip_box
 ```
 
+## Histogram
+
+```{r}
+ABC_hist = 
+  rest_inspec %>%
+  filter(grade %in% c("A", "B", "C"), !(boro == "Missing")) %>% 
+  mutate(
+    boro = as.factor(boro),
+    grade = as.factor(grade)
+  ) %>% 
+  group_by(boro, grade) %>% 
+  count(boro, grade) %>% 
+  plot_ly(
+    x = ~boro, y = ~n, color = ~grade, type = "bar"
+  )
+
+ABC_hist
+```
+
+## Scatterplot
+
+
+```{r}
+score_point = 
+  rest_inspec %>%
+  filter(grade %in% c("A", "B", "C"), boro == "BRONX") %>% 
+  drop_na(score) %>% 
+  mutate(
+    grade = as.factor(grade)
+  ) %>% 
+  plot_ly(
+    x = ~grade, y = ~score, type = "scatter", mode = "markers"
+  )
+
+score_point
+```
+
 
