@@ -41,4 +41,6 @@ GitHub: https://github.com/WenshanQu
 
 You can also directly link to these accounts by clicking the button on the top of this page!
 
+## Download
 
+download [pdf](https://github.com/WenshanQu/WenshanQu.github.io/blob/main/ds%20midterm%20article.pdf)
