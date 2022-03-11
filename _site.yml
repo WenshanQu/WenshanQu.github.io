@@ -7,6 +7,8 @@ navbar:
       href: index.html
     - text: "Resume"
       href: resume.html
+    - text: "Sample Project"
+      href: https://wenshanqu.github.io/NYC_shooting_fact.github.io/
     - text: "Plotly and Dashboard"
       menu: 
       - text: "Plotly Code 1"
